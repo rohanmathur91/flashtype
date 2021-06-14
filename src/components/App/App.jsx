@@ -1,8 +1,23 @@
 import React from 'react';
+import './App.css';
+import Nav from '../Nav/Nav';
+import Landing from '../Landing/Landing';
 
 class App extends React.Component {
 	render() {
-		return <h1>Hey its App component.</h1>;
+		return (
+			<div className="app">
+				{/* Nav Section */}
+				<Nav />
+
+				{/* Landing Page */}
+				<Landing />
+
+				{/* Challenge Section */}
+
+				{/* Footer */}
+			</div>
+		);
 	}
 }
 
