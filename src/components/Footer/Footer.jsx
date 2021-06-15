@@ -1,4 +1,5 @@
 import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
 	return (
@@ -9,7 +10,7 @@ const Footer = () => {
 				target="_blank"
 				rel="noreferrer"
 			>
-				View source code.
+				View source code
 			</a>
 		</div>
 	);
