@@ -8,9 +8,13 @@
 }
 
 .footer-link {
-	text-decoration: none;
 	font-size: 26px;
 	color: #e7e6e7;
 	margin: 10px;
 	text-align: center;
+}
+
+.github-logo {
+	padding: 6px 0;
+	height: 8vh;
 }

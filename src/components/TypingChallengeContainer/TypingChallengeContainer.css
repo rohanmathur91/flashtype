@@ -1,0 +1,15 @@
+.typing-chanllenge-container {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.details-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.typewriter-container {
+	display: flex;
+	flex-grow: 1;
+}
