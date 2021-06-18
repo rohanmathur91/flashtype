@@ -26,7 +26,7 @@ const TryAgain = ({ words, characters, wpm, startAgain }) => {
 				<button
 					onClick={() => {
 						window.open(
-							'https://www.facebook.com/sharer/sharer.php?u=github.com/rohan-04',
+							'https://www.facebook.com/sharer/sharer.php?u=rohan-04.github.io/flashtype/',
 							'facebook-share-dialog',
 							'width=800,height=600'
 						);
@@ -50,7 +50,7 @@ const TryAgain = ({ words, characters, wpm, startAgain }) => {
 				<button
 					onClick={() => {
 						window.open(
-							'https://www.linkedin.com/sharing/share-offsite/?url=github.com/rohan-04',
+							'https://www.linkedin.com/sharing/share-offsite/?url=rohan-04.github.io/flashtype/',
 							'LinkedIn',
 							'width=800,height=600'
 						);
