@@ -9,18 +9,20 @@ const TotalTime = 60;
 const ServiceUrl =
 	'https://baconipsum.com/api/?type=all-meat&paras=3&start-with-lorem=1&format=text';
 
-class App extends React.Component {
-	state = {
-		selectedParagraph: 'Hello World!',
-		testInfo: [],
-		timeStarted: false,
-		timeRemaining: TotalTime,
-		words: 0,
-		characters: 0,
-		wpm: 0,
-	};
+const DefaultState = {
+	selectedParagraph: '',
+	testInfo: [],
+	timeStarted: false,
+	timeRemaining: TotalTime,
+	words: 0,
+	characters: 0,
+	wpm: 0,
+};
 
-	componentDidMount() {
+class App extends React.Component {
+	state = DefaultState;
+
+	fetchNewParagraph = () => {
 		fetch(ServiceUrl)
 			.then((response) => response.text())
 			.then((data) => {
@@ -32,8 +34,12 @@ class App extends React.Component {
 					};
 				});
 
-				this.setState({ testInfo, selectedParagraph: data });
+				this.setState({ ...DefaultState, testInfo, selectedParagraph: data });
 			});
+	};
+
+	componentDidMount() {
+		this.fetchNewParagraph();
 	}
 
 	startTimer = () => {
@@ -55,6 +61,9 @@ class App extends React.Component {
 			}
 		}, 1000);
 	};
+
+	// Try Again
+	startAgain = () => this.fetchNewParagraph();
 
 	handleUserInput = (inputValue) => {
 		if (!this.state.timeStarted) this.startTimer();
@@ -140,6 +149,7 @@ class App extends React.Component {
 					timeStarted={this.state.timeStarted}
 					testInfo={this.state.testInfo}
 					onInputChange={this.handleUserInput}
+					startAgain={this.startAgain}
 				/>
 
 				{/* Footer */}

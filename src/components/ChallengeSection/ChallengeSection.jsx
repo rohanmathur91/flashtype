@@ -11,6 +11,7 @@ const ChallengeSection = ({
 	timeStarted,
 	testInfo,
 	onInputChange,
+	startAgain,
 }) => {
 	return (
 		<div className="challenge-section-container">
@@ -26,6 +27,7 @@ const ChallengeSection = ({
 				timeStarted={timeStarted}
 				testInfo={testInfo}
 				onInputChange={onInputChange}
+				startAgain={startAgain}
 			/>
 		</div>
 	);
