@@ -13,7 +13,7 @@ const Nav = () => {
 				<a
 					target="_blank"
 					className="nav-github-link"
-					href="https://github.com/rohan-04"
+					href="https://github.com/rohanmathur91/flashtype"
 					rel="noreferrer"
 				>
 					GitHub
